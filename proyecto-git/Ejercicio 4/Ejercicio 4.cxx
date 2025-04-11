@@ -7,7 +7,7 @@ void contar_ocurrencias(char *cadena, char *palabra) {
     int longitud_cadena = strlen(cadena);
     int longitud_palabra = strlen(palabra);
     
-    // Convertir ambas cadenas a minúsculas
+    
     for (int i = 0; cadena[i]; i++) {
         cadena[i] = tolower(cadena[i]); 
     }
@@ -16,7 +16,7 @@ void contar_ocurrencias(char *cadena, char *palabra) {
         palabra[i] = tolower(palabra[i]); 
     }
 
-    // Buscar la palabra en la cadena
+    
     for (int i = 0; i <= longitud_cadena - longitud_palabra; i++) {
         if (strncmp(&cadena[i], palabra, longitud_palabra) == 0) {
             contador++;
@@ -34,13 +34,13 @@ int main() {
     printf("Ingrese la cadena: ");
     fgets(cadena, sizeof(cadena), stdin);
     
-    // Eliminar el salto de línea de fgets
+    
     cadena[strcspn(cadena, "\n")] = 0;
 
     printf("Ingrese la palabra a buscar: ");
     fgets(palabra, sizeof(palabra), stdin);
     
-    // Eliminar el salto de línea de fgets
+    
     palabra[strcspn(palabra, "\n")] = 0;
 
     contar_ocurrencias(cadena, palabra);

@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 
-// Valida la parte del tablero del FEN (campo 1)
+
 bool validar_posicion(const char *pos)
 {
     char *row_copy = strdup(pos);
