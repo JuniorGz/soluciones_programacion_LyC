@@ -1,1 +1,0 @@
-# soluciones_programacion_LyC
